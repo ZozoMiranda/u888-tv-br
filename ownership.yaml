@@ -1,0 +1,87 @@
+# Term Ownership Architecture — U888 Network (A13)
+# Zero unassigned head terms. Every primary keyword mapped to an exact canonical endpoint.
+
+head_terms:
+  - keyword: "u888 brasil"
+    site: "u888b.com.br"
+    path: "/"
+    role: "hub"
+    intent: "navigational"
+    search_volume: 24500
+
+  - keyword: "u888 bonus"
+    site: "u888b.com.br"
+    path: "/bonus/"
+    role: "pillar_bonus"
+    intent: "commercial"
+    search_volume: 8700
+
+  - keyword: "u888 como sacar"
+    site: "u888b.com.br"
+    path: "/como-sacar/"
+    role: "pillar_saque"
+    intent: "transactional"
+    search_volume: 7900
+
+  - keyword: "u888 como depositar"
+    site: "u888b.com.br"
+    path: "/como-depositar/"
+    role: "pillar_deposito"
+    intent: "transactional"
+    search_volume: 5400
+
+  - keyword: "u888 jogos cassino"
+    site: "u888b.com.br"
+    path: "/jogos/"
+    role: "pillar_jogos"
+    intent: "informational"
+    search_volume: 6100
+
+  - keyword: "esportes na u888"
+    site: "u888b.com.br"
+    path: "/esportes/"
+    role: "pillar_esportes_overview"
+    intent: "informational"
+    search_volume: 4300
+
+  - keyword: "u888 confiavel e licenca"
+    site: "u888b.com.br"
+    path: "/sobre/"
+    role: "trust_legal"
+    intent: "navigational"
+    search_volume: 5800
+
+  - keyword: "u888 jogo responsavel"
+    site: "u888b.com.br"
+    path: "/jogo-responsavel/"
+    role: "trust_responsible"
+    intent: "informational"
+    search_volume: 1200
+
+  - keyword: "prazos de saque u888 pix"
+    site: "u888b.com.br"
+    path: "/prazos-de-saque/"
+    role: "data_page_prazos"
+    intent: "transactional"
+    search_volume: 3800
+
+  - keyword: "taxas e tarifas u888"
+    site: "u888b.com.br"
+    path: "/taxas/"
+    role: "data_page_taxas"
+    intent: "informational"
+    search_volume: 2100
+
+  - keyword: "limites de deposito e saque u888"
+    site: "u888b.com.br"
+    path: "/limites/"
+    role: "data_page_limites"
+    intent: "transactional"
+    search_volume: 2900
+
+  - keyword: "metodologia de auditoria u888"
+    site: "u888b.com.br"
+    path: "/metodologia/"
+    role: "trust_methodology"
+    intent: "informational"
+    search_volume: 950

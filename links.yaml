@@ -1,0 +1,61 @@
+# Internal Linking Topology — U888 Network (A13)
+# Rules: No orphan pages. Doorway to doorway strictly forbidden. All doorways link to hub.
+
+topology:
+  hub:
+    source: "/"
+    outbound:
+      pillars: ["/bonus/", "/como-sacar/", "/como-depositar/", "/jogos/", "/esportes/"]
+      trust: ["/sobre/", "/termos/", "/jogo-responsavel/", "/metodologia/"]
+      data_pages: ["/prazos-de-saque/", "/taxas/", "/limites/"]
+      doorways: [
+        "/cassino-online/", "/aposta-esportiva/", "/bonus-sem-deposito/",
+        "/pix-cassino/", "/saque-rapido/", "/slots/", "/roleta/",
+        "/blackjack/", "/odds-hoje/", "/app-u888/"
+      ]
+
+  pillars:
+    - path: "/como-sacar/"
+      inbound: ["/", "/como-depositar/", "/prazos-de-saque/"]
+      outbound: ["/prazos-de-saque/", "/limites/", "/taxas/", "/sobre/", "/metodologia/"]
+    - path: "/como-depositar/"
+      inbound: ["/", "/como-sacar/", "/limites/"]
+      outbound: ["/limites/", "/taxas/", "/bonus/", "/metodologia/"]
+    - path: "/bonus/"
+      inbound: ["/", "/como-depositar/", "/bonus-sem-deposito/"]
+      outbound: ["/como-sacar/", "/termos/", "/metodologia/"]
+    - path: "/jogos/"
+      inbound: ["/", "/slots/", "/roleta/"]
+      outbound: ["/slots/", "/roleta/", "/blackjack/", "/metodologia/"]
+    - path: "/esportes/"
+      inbound: ["/", "/odds-hoje/", "/aposta-esportiva/"]
+      outbound: ["/odds-hoje/", "/sobre/"]
+
+  data_pages:
+    - path: "/prazos-de-saque/"
+      inbound: ["/", "/como-sacar/", "/saque-rapido/"]
+      outbound: ["/como-sacar/", "/metodologia/", "/limites/"]
+    - path: "/taxas/"
+      inbound: ["/", "/como-sacar/", "/como-depositar/"]
+      outbound: ["/como-sacar/", "/como-depositar/", "/metodologia/"]
+    - path: "/limites/"
+      inbound: ["/", "/como-sacar/", "/como-depositar/"]
+      outbound: ["/prazos-de-saque/", "/taxas/", "/metodologia/"]
+
+  trust_stack:
+    - path: "/metodologia/"
+      inbound: ["/", "/sobre/", "/prazos-de-saque/", "/taxas/", "/limites/"]
+      outbound: ["/sobre/", "/prazos-de-saque/", "/limites/"]
+    - path: "/sobre/"
+      inbound: ["/", "/metodologia/", "/termos/"]
+      outbound: ["/termos/", "/jogo-responsavel/", "/metodologia/"]
+    - path: "/termos/"
+      inbound: ["/", "/sobre/"]
+      outbound: ["/sobre/", "/jogo-responsavel/"]
+    - path: "/jogo-responsavel/"
+      inbound: ["/", "/sobre/"]
+      outbound: ["/sobre/", "/metodologia/"]
+
+  doorways_rule:
+    allowed_outbound: ["https://u888b.com.br/", "https://u888b.com.br/bonus/", "https://u888b.com.br/como-sacar/", "https://u888b.com.br/jogos/"]
+    forbidden: ["doorway -> doorway"]
