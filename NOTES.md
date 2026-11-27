@@ -16,4 +16,14 @@ Em cumprimento às diretrizes de publicação:
 - **`CNAME`**: Criado contendo exatamente uma linha (`u888.tv.br`), sem protocolo, sem barra e sem quebras de linha adicionais.
 - **`_config.yml`**: Verificado; arquivo inexistente na raiz.
 - **Pasta `_site`**: Verificada; a pasta `_site` não existe no repositório, confirmando que a raiz de publicação do Pages é o próprio diretório raiz (`/`).
-- **`index.html` na Raiz**: Copiado integralmente da home do espelho de mídia/transmissão (`dist/u888.inf.br/index.html`, 6.102 bytes), preservando o conteúdo original byte a byte sem qualquer reformatar ou reescrever.
+- **`index.html` na Raiz**: Inicialmente copiado da home do espelho de mídia/transmissão (`dist/u888.inf.br/index.html`), e posteriormente atualizado com a importação completa do espelho.
+
+### 3. Importação do Espelho Estático Completo
+- **Fonte Selecionada**: `u888-network/dist/u888.etc.br` (a pasta irmã com maior quantidade de arquivos `.html`: 22 páginas).
+- **Arquivos Protegidos Mantidos Intactos**: `CNAME`, `.nojekyll`, `AGENTS.md`, `AUDIT.md`, `NOTES.md`.
+- **Arquivos Excluídos da Cópia**: `_redirects` e arquivos de infraestrutura Cloudflare.
+- **Métricas Finais do Repositório**:
+  - Total de arquivos: 34
+  - Total de páginas `.html`: 22
+  - Peso total: 0,14 MB (abaixo do teto de segurança de 300 MB).
+- **Publicação Remota**: O utilitário GitHub CLI (`gh`) não se encontra instalado/autenticado no terminal local. O comando foi suspenso conforme instrução, retornando os passos manuais de provisionamento e push para o usuário.
